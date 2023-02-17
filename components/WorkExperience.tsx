@@ -287,25 +287,16 @@ useEffect(() => {
         transition={{
           duration:1.5
         }}
-        className='h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly s items-center '>
+        className='h-screen w-full flex relative flex-col text-left md:flex-row max-w-full px-10 justify-evenly items-center '>
     
-    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Expériences</h3>
+    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl xs:left-2'>Expériences</h3>
 
           <div className='p-10 ' >
           {/* //carousel */}
-          <div className={isMobile ? 'block' : 'hidden'}>
-          <AiOutlineLeft
-        onClick={handlePrevSlide}
-        className="absolute left-40 md:left-5 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20 hover:text-6xl transition-all duration-75 hover:text-[#C282FA]/40"
-        
-      />
-      </div>
+         
+  
 <div className="w-full h-full flex overflow-hidden relative m-auto">
-        <Swipe
-          onSwipeLeft={handleNextSlide}
-          onSwipeRight={handlePrevSlide}
-          className="relative z-10 w-full h-full"
-        >
+    
             
 
           {TravailsPro?.map((travail, index)=> {
@@ -319,23 +310,18 @@ useEffect(() => {
           )}
 
 
-        </Swipe>
+        
           </div>
-          <div className={isMobile ? 'block' : 'hidden'}>
-          <AiOutlineRight
-        onClick={handleNextSlide}
-        className="absolute right-40 md:right-5 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20 hover:text-6xl transition-all duration-75 hover:text-[#C282FA]/40"
-      />
-      </div>
+      
 
-<div className="relative flex justify-center p-2">
+<div className="relative flex justify-center p-2 xs:p-0">
         {TravailsPro.map((_, index) => {
           return (
             <div
               className={
                 index === currentSlide
-                  ? "h-4 w-4 bg-gray-700 rounded-full mx-2 mb- md:mt-4  cursor-pointer"
-                  : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 md:mt-4   cursor-pointer"
+                  ? "h-4 w-4 bg-gray-700 rounded-full mx-2 mb-2 md:mt-4 xs:mt-0  cursor-pointer"
+                  : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 md:mt-4 xs:mt-0   cursor-pointer"
               }
               key={index}
               onClick={() => {

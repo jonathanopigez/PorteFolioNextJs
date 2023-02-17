@@ -45,7 +45,7 @@ function Projets({}: Props) {
 
         <div className='relative w-full flex overflow-x-scroll space-x-40 mb:space-x-0 overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40'>
             {projets.map((projet,i) => (
-                <article key={projet?.id} className='w-screen flex-shrink-0 snap-end flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen '>
+                <article key={projet?.id} className='w-screen flex-shrink-0 snap-end flex flex-col space-y-5 xs:space-y-0 items-center justify-center p-20 xs:p-10 md:p-44 h-screen '>
                     <motion.img 
                      
                     initial={{opacity:0,y:-300}}
@@ -53,13 +53,13 @@ function Projets({}: Props) {
                     transition={{duration:1.2}}
                     viewport={{once: true}}
 
-                    className='h-[250px] w-[400px]'
+                    className='h-[250px] w-[400px] xs:h-40 xs:w-56'
                     src={projet.image} alt="" />
-                    <div className='space-y-10 pc-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-3xl xs:text-2xl font-semibold text-center'>
-                            <span className='underline decoration-[#C282FA]/50'> Projet { i + 1 } sur {projets.length}</span> : {projet.nom}  
+                    <div className='space-y-10 xs:space-y-5 pc-0 md:px-10 max-w-6xl'>
+                        <h4 className='text-3xl xs:text-2xl font-semibold text-center xs:text-[18px]'>
+                            <span className='underline decoration-[#C282FA]/50 '> Projet { i + 1 } sur {projets.length}</span> : {projet.nom}  
                             </h4>
-                            <div className='uppercase space-x-5  flex justify-center  xs:space-x-3 content-center xs:text-sm'>
+                            <div className='uppercase space-x-5 xs:space-x-2  flex justify-center  content-center xs:text-[10px] xs:grid grid-cols-2'>
                             {projet.skills.map(technology =>(
                                 <span key={projet?.id} className='uppercase text-gray-500 text-center'>
                                   
@@ -69,7 +69,7 @@ function Projets({}: Props) {
                             ))}
                             
                             </div>
-                            <p className='text-md text-center'>{projet?.description}</p>
+                            <p className='text-md text-center xs:text-[12px]'>{projet?.description}</p>
                     </div>
                 </article>
             ))}

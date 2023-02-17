@@ -67,8 +67,8 @@ function ExperienceCard({titre, type, image, dateStart, dateEnd, skills, compete
             {skills?.map((skill)=> {
            
               return(
-             <div>
-               <Image key={skill.id} 
+             <div key={skill.id}>
+               <Image  
                 alt=""
                 width="40" height="40"
                 className="md:w-12 md:h-12 xs:w-8 sm:h-8"

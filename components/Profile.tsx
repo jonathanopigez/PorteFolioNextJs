@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion"
@@ -15,7 +15,17 @@ type Props = {
 
 function Profile({}: Props) {
 
- 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth > 500);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
   const [text, count] = useTypewriter({
@@ -59,8 +69,9 @@ function Profile({}: Props) {
             <span id="encrypt" className='mr-3'>{text}</span>
             <Cursor cursorColor='#6E61Ca' />
       </h1>
-      
+      <div className={isMobile ? 'block' : 'hidden'}>
       <div className='pt-5'>
+
         <Link href="#about"><button className='profilButton hover:text-[#6E61Ca]'>à propos</button></Link>
         <Link href="#experiences"><button className='profilButton hover:text-[#6E61Ca]'>Expériences</button></Link>
         <Link href="#competences"><button className='profilButton hover:text-[#6E61Ca]'>Compétences</button></Link>
@@ -69,6 +80,7 @@ function Profile({}: Props) {
  
       
         
+      </div>
       </div>
       </div>
       </motion.div>

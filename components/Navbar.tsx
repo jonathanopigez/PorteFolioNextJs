@@ -8,7 +8,7 @@ type Props = {}
 function Navbar({}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="fixed bottom-0  transform -translate-x-1/2 pb-2 left-1/2 flex flex-col ">
+    <div className="fixed bottom-0  transform -translate-x-1/2 pb-2 left-1/2 flex flex-col z-40 ">
     <button
       className="bg-gray-700 text-white font-medium uppercase p-2 "
       onClick={() => setIsMenuOpen(!isMenuOpen)}

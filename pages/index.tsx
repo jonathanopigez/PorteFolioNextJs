@@ -9,14 +9,27 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { HomeIcon } from '@heroicons/react/24/solid';
 import Navbar from '@/components/Navbar';
+import { useEffect, useState } from 'react';
+
 
 
 type Props = {
  
 }
 
-const Home = ( {}: Props) => {
 
+const Home = ( {}: Props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth > 500);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
  
@@ -52,9 +65,10 @@ const Home = ( {}: Props) => {
           <Contact />
         </section>
 
-     
-
-     <Navbar />
+        <div className={isMobile ? 'hidden' : 'block'}>
+       <Navbar />
+    </div>
+    
 
   
 {/*         

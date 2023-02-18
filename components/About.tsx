@@ -26,7 +26,7 @@ useEffect(() => {
 
   return (
     <div className=' flex flex-col relative h-screen md:text-left md:flex-row max-x7xl px-10 justify-evenly mx-auto items-center md:max-w-[100%]'>
-        <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl mb-5 xs:left-14'>A propos</h3>
+        <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl mb-5 '>A propos</h3>
         <motion.div
         initial={{
           x:-200,

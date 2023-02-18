@@ -289,7 +289,7 @@ useEffect(() => {
         }}
         className='h-screen w-full flex relative flex-col text-left md:flex-row max-w-full px-10 justify-evenly items-center '>
     
-    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl xs:left-2'>Expériences</h3>
+    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xls'>Expériences</h3>
 
           <div className='p-10 ' >
           {/* //carousel */}

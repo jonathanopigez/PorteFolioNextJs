@@ -131,7 +131,7 @@ function Compétence({}: Props) {
     transition={{duration:1.5}}
     
     className='h-screen flex  relative flex-col text-center md:text-left xl:flew-row max-w-[2000px] xl:pc-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center xs:space-y-0 '>
-       <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl xs:left-0'>Compétences</h3>
+       <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '>Compétences</h3>
        <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Survolez les compétences pour plus de détails</h3>
 
 

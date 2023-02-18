@@ -20,7 +20,7 @@ function Contact({}: Props) {
 
   return (
 <div className='h-screen flex relative  flex-col text-center md:text-left   md:flex-row max-x-7xl px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl xs:left-7'>Contactez-moi</h3>
+        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '>Contactez-moi</h3>
 
         <div className='flex flex-col space-y-10 xs:space-y-3 xs:h-[300px]'>
             <h4 className='text-lg font-semibold text-center'>Une question ? Un projet ?  <span className='decoration-[#C282FA]/50 underline'>N&apos;hésitez pas</span> !

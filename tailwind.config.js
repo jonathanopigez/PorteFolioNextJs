@@ -9,10 +9,10 @@ module.exports = {
     extend: {},
 
     screens: {
-      xs: "200px",
+      xs: "375px",
 
       sm: "576px",
-      // => @media (max-width: 576px) { ... }
+      // => @media (min-width: 576px) { ... }
 
       md: "960px",
       // => @media (min-width: 960px) { ... }

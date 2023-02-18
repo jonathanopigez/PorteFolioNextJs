@@ -8,6 +8,7 @@ import WorkExperience from '@/components/WorkExperience';
 import Head from 'next/head';
 import Link from 'next/link';
 import { HomeIcon } from '@heroicons/react/24/solid';
+import Navbar from '@/components/Navbar';
 
 
 type Props = {
@@ -53,10 +54,10 @@ const Home = ( {}: Props) => {
 
      
 
-     
+     <Navbar />
 
   
-        
+{/*         
           <Link href="#home">
               <footer className='sticky bottom-5 w-full cursor-pointer'>
                 <div className='flex items-center justify-center'>
@@ -64,7 +65,7 @@ const Home = ( {}: Props) => {
                 </div>
               </footer>
 
-          </Link>
+          </Link> */}
 
 
     </div>

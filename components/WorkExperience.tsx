@@ -297,7 +297,7 @@ useEffect(() => {
   
 <div className="w-full h-full flex overflow-hidden relative m-auto">
     
-            
+      
 
           {TravailsPro?.map((travail, index)=> {
             if(index === currentSlide){
@@ -309,19 +309,21 @@ useEffect(() => {
            
           )}
 
-
-        
           </div>
       
 
 <div className="relative flex justify-center p-2 xs:p-0">
+<AiOutlineLeft
+        onClick={handlePrevSlide}
+        className=" z-20 text-2xl transition-all duration-75 hover:text-[#C282FA]/40"
+      />
         {TravailsPro.map((_, index) => {
           return (
             <div
               className={
                 index === currentSlide
-                  ? "h-4 w-4 bg-gray-700 rounded-full mx-2 mb-2 md:mt-4 xs:mt-0  cursor-pointer"
-                  : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 md:mt-4 xs:mt-0   cursor-pointer"
+                  ? "h-4 w-4 bg-[#C282FA]/10 rounded-full mx-2 mb-2 md:mt-4  mt-1  cursor-pointer"
+                  : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 md:mt-4 mt-1    cursor-pointer"
               }
               key={index}
               onClick={() => {
@@ -330,6 +332,10 @@ useEffect(() => {
             />
           );
         })}
+            <AiOutlineRight
+        onClick={handleNextSlide}
+        className=" z-20 text-2xl   transition-all duration-75 hover:text-[#C282FA]/40"
+      />
       </div>
 
 

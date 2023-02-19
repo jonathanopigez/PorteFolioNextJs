@@ -1,54 +1,92 @@
-import React, { useEffect, useRef } from 'react'
-import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-
-type Props = {}
+type Props = {};
 
 function Navbar({}: Props) {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isTextVisible, setIsTextVisible] = useState(true);
+  const menuRef = useRef<HTMLDivElement>(null);
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-  
-    useEffect(() => {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, []);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setIsTextVisible(true);
+  };
 
-    function closeMenu() {
-      setIsMenuOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsTextVisible(false);
+  };
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      closeMenu();
     }
-  
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isTextVisible) {
+      document.body.style.overflow = "visible";
+    }
+  }, [isTextVisible]);
+
   return (
-    <div className="fixed top-6 right-0 transform items-end flex flex-col z-40 ">
-    <button
-      className=" text-gray-500 right-4 font-medium uppercase p-2 justify-evenly "
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-    >
-      Menu
-    </button>
-    {isMenuOpen && (
-        
-      <div ref={menuRef} className=" bg-gray-700 flex flex-col font-medium uppercase  w-screen mt-0 z-40 h-80 space-y-4">
-        
-        <Link onClick={closeMenu} href="#home"><button className='profilButton hover:text-[#6E61Ca]'>Acceuil</button></Link>
-    <Link onClick={closeMenu} href="#about"><button className='profilButton hover:text-[#6E61Ca]'>à propos</button></Link>
-        <Link onClick={closeMenu} href="#experiences"><button className='profilButton hover:text-[#6E61Ca]'>Expériences</button></Link>
-        <Link onClick={closeMenu} href="#competences"><button className='profilButton hover:text-[#6E61Ca]'>Compétences</button></Link>
-        <Link onClick={closeMenu} href="#projets"><button className='profilButton hover:text-[#6E61Ca]'>Projets</button></Link>
-        <Link onClick={closeMenu} href="#contact"><button className='profilButton hover:text-[#6E61Ca]'>Contact</button></Link>
-      </div>
-    )}
-  </div>
-);
-};
+    <div className="fixed bottom-0 left-0 w-full z-50">
+      <button
+        className="fixed top-6 right-6 w-12 h-12 text-gray-500 font-medium uppercase border-gray-500 rounded-full flex justify-center items-center z-50"
+        onClick={toggleMenu}
+      >
+        {isMenuOpen ? "Close" : "Menu"}
+      </button>
 
+      {isMenuOpen && (
+        <motion.div
+          ref={menuRef}
+          initial={{ x: 400 }}
+          animate={{ x: 0 }}
+          exit={{ x: 400 }}
+          transition={{ duration: 0.6 }}
+          className="fixed top-16 right-0 w-full h-72 bg-[#232323] font-medium suppercase flex flex-col items-center justify-evenly z-50"
+          onClick={closeMenu}
+        >
+          <Link href="#home">
+            <button className="hover:text-[#6E61Ca] profilButton">Acceuil</button>
+          </Link>
+          <Link href="#about">
+            <button className="hover:text-[#6E61Ca] profilButton">À propos</button>
+          </Link>
+          <Link href="#experiences">
+            <button className="hover:text-[#6E61Ca] profilButton">Expériences</button>
+          </Link>
+          <Link href="#competences">
+            <button className="hover:text-[#6E61Ca] profilButton">Compétences</button>
+          </Link>
+          <Link href="#projets">
+            <button className="hover:text-[#6E61Ca] profilButton">Projets</button>
+          </Link>
+        </motion.div>
+      )}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="fixed top-0 left-0 w-full h-full bg-black z-40"
+          onClick={handleOutsideClick}
+        />
+      )}
+    </div>
+  );
+}
 
-export default Navbar
+export default Navbar;

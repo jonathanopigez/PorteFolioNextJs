@@ -82,7 +82,7 @@ function Navbar({}: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
           className="fixed top-0 left-0 w-full h-full bg-black z-40"
-          onClick={handleOutsideClick}
+          
         />
       )}
     </div>

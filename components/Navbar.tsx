@@ -38,7 +38,7 @@ function Navbar({}: Props) {
         <Link href="#experiences"><button className='profilButton hover:text-[#6E61Ca]'>Expériences</button></Link>
         <Link href="#competences"><button className='profilButton hover:text-[#6E61Ca]'>Compétences</button></Link>
         <Link href="#projets"><button className='profilButton hover:text-[#6E61Ca]'>Projets</button></Link>
-        <Link href="#contact"><button className='profilButton hover:text-[#6E61Ca]'>Contacte</button></Link>
+        <Link href="#contact"><button className='profilButton hover:text-[#6E61Ca]'>Contact</button></Link>
       </div>
     )}
   </div>

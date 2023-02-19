@@ -31,6 +31,8 @@ const Home = ( {}: Props) => {
     };
   }, []);
 
+
+
   return (
  
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden md:overflow-swipe z-0 scrollbar-none'>
@@ -67,20 +69,21 @@ const Home = ( {}: Props) => {
 
         <div className={isMobile ? 'hidden' : 'block'}>
        <Navbar />
+       
     </div>
     
-
-  
-{/*         
-          <Link href="#home">
+    <Link href="#home">
               <footer className='sticky bottom-5 w-full cursor-pointer'>
                 <div className='flex items-center justify-center'>
-                    <HomeIcon className=' opacity-20 h-10 w-10 rounded-full filter hover:text-[#C282FA] transition-colors cursor-pointer hover:h-12 hover:w-12 hover:opacity-80 z-50'/>
+                    <HomeIcon className=' hidden sm:block opacity-20 h-10 w-10 rounded-full filter hover:text-[#C282FA] transition-colors cursor-pointer hover:h-12 hover:w-12 hover:opacity-80 z-50'/>
                 </div>
               </footer>
 
-          </Link> */}
-
+          </Link> 
+   
+    <div className={isMobile ? 'block' : 'block'}>
+          
+          </div>
 
     </div>
   )

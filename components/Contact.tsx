@@ -22,10 +22,10 @@ function Contact({}: Props) {
 <div className='h-screen flex relative  flex-col text-center md:text-left   md:flex-row max-x-7xl px-10 justify-evenly mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '>Contactez-moi</h3>
 
-        <div className='flex flex-col space-y-10 xs:space-y-3 xs:h-[300px]'>
+        <div className='flex flex-col space-y-10  '>
             <h4 className='text-lg font-semibold text-center'>Une question ? Un projet ?  <span className='decoration-[#C282FA]/50 underline'>N&apos;hésitez pas</span> !
             </h4>
-            <div className='space-y-10 xs:space-y-3'>
+            <div className='space-y-10 sm:space-y-3'>
                 <div className='flex items-center space-x-2 justify-center'>
                     <PhoneIcon className='text-[#C282FA] h-7 w-7 animate-pulse' />
                     <p className='text-2xl xs:text-[18px]'>+33783943712</p>
@@ -39,19 +39,19 @@ function Contact({}: Props) {
                     <p className='text-2xl xs:text-[18px]'>opigezjonathan@gmail.com</p>
                 </div>
             </div>
-    
-                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto xs:w-[300px] xs:h-[300px]'>
+ 
+                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-[380px] mx-auto '>
                     <div className='flex space-x-2'>
-                        <input {...register("nom")} placeholder='Nom' className='contactInput xs:h-5 xs:w-[145px]' type="text" />
-                        <input {...register("email")}placeholder='Email' className='contactInput xs:h-5 xs:w-[145px]' type="email" />
+                        <input {...register("nom")} placeholder='Nom' className='contactInput ' type="text" />
+                        <input {...register("email")}placeholder='Email' className='contactInput w-[143px] ' type="email" />
                     </div>
-                    <input {...register("sujet")}  placeholder='Sujet'  className='contactInput xs:h-5 xs:w-[300px]' type="text" />
+                    <input {...register("sujet")}  placeholder='Sujet'  className='contactInput ' type="text" />
                     <textarea {...register("message")}  placeholder='Message' className='contactInput' />
                     <button type='submit' 
                     className='bg-[#C282FA] py-5 px-10 rounded-md text-black font-bold text-lg'>Envoyer</button>
                 </form>
-
-        </div>
+                </div>
+  
 </div>
   )
 }

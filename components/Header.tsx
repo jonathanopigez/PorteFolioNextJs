@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from "framer-motion"
 
 import Contactbtn from './Contactbtn';
+import Navbar from './Navbar';
 
 type Props = {}
 
  function Header({}: Props) {
+    
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth > 500);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
         <motion.div
@@ -42,7 +55,7 @@ type Props = {}
         </motion.div>
 
         {/*Contactez-moi*/}
-       
+        <div className={isMobile ? 'block' : 'hidden'}>
         <motion.div
         initial={{
             x: 500,
@@ -62,7 +75,10 @@ type Props = {}
       <Contactbtn/>
            
         </motion.div>
-      
+        </div>
+        <div className={isMobile ? 'hidden' : 'block'}>
+            <Navbar/>
+        </div>
         </header>
   )
 }

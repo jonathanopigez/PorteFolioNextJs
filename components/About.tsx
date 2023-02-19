@@ -68,7 +68,7 @@ useEffect(() => {
           viewport={{once:true}}
         
         className='space-y-10  md:px-10 md:max-w-[60%] '>
-          <h4 className='pt-2  font-semibold text-center'>Une présentation <span className='text-[#6E61Ca]'>s&apos;impose !</span> </h4>
+          <h4 className='pt-2 text-3xl font-semibold text-center'>Une présentation <span className='text-[#6E61Ca]'>s&apos;impose !</span> </h4>
           <p className=' tracking-wider text-left text-sm md:text-lg '>Bienvenue ! Je me présente, je m&apos;appelle Jonathan et je vais t&apos;expliquer qui je suis et comment j&apos;en suis arrivé à développer des sites web. Les technologies et tout ce qui concerne le numérique ont toujours été une grande passion pour moi. Récemment, j&apos;ai réalisé qu&apos;on pouvait en faire un travail. C&apos;est pourquoi j&apos;ai suivi une formation Bac +2 en développeur web et web mobile, et j&apos;en suis sorti diplômé. J&apos;ai eu l&apos;occasion de travailler sur de nombreux projets, allant du simple site vitrine à une application de gestion avec base de données.  Je cherche constamment à m&apos;améliorer, c&apos;est pourquoi après ma formation, j&apos;ai continué à me former en autodidacte sur différentes technologies telles que React.js, Next.js. Actuellement, je cherche à obtenir un diplôme Bac +3 en concepteur-développeur d&apos;applications. Je suis à la recherche d&apos;une entreprise qui serait prête à me former pendant 16 mois. Si vous êtes un recruteur, vous pouvez me contacter via la rubrique  &quot;<Link href="#contact" className=' underline decoration-[#6E61Ca] hover:text-[#6E61Ca] hover:decoration-transparent' >Contactez-moi</Link>&quot;.</p>
         </motion.div>
    

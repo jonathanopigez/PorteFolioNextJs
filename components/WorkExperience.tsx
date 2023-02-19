@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
-import Swipe from 'react-easy-swipe';
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 
@@ -289,10 +288,10 @@ useEffect(() => {
         }}
         className='h-screen w-full flex relative flex-col text-left md:flex-row max-w-full px-10 justify-evenly items-center '>
     
-    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xls'>Expériences</h3>
+    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Expériences</h3>
 
           <div className='p-10 ' >
-          {/* //carousel */}
+       
          
   
 <div className="w-full h-full flex overflow-hidden relative m-auto">
@@ -315,7 +314,7 @@ useEffect(() => {
 <div className="relative flex justify-center p-2 xs:p-0">
 <AiOutlineLeft
         onClick={handlePrevSlide}
-        className=" z-20 text-2xl transition-all duration-75 hover:text-[#C282FA]/40"
+        className=" sm:relative z-20 text-2xl transition-all duration-75 hover:text-[#C282FA]/40 sm:top-3"
       />
         {TravailsPro.map((_, index) => {
           return (
@@ -334,7 +333,7 @@ useEffect(() => {
         })}
             <AiOutlineRight
         onClick={handleNextSlide}
-        className=" z-20 text-2xl   transition-all duration-75 hover:text-[#C282FA]/40"
+        className=" z-20 text-2xl   transition-all duration-75 hover:text-[#C282FA]/40 sm:relative sm:top-3"
       />
       </div>
 

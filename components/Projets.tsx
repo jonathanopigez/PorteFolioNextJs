@@ -45,7 +45,7 @@ function Projets({}: Props) {
 
         <div className='relative w-full flex overflow-x-scroll space-x-40 mb:space-x-0 overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40'>
             {projets.map((projet,i) => (
-                <article key={projet?.id} className='w-screen flex-shrink-0 snap-end flex flex-col space-y-5 items-center justify-end p-20 xs:p-10 h-screen  '>
+                <article key={projet?.id} className='w-screen flex-shrink-0 snap-end flex flex-col space-y-5 items-center mt-32 sm:mt-0 sm:justify-center p-20 xs:p-10 h-screen  '>
                     <motion.img 
                      
                     initial={{opacity:0,y:-300}}

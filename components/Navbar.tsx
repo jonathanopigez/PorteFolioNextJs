@@ -21,6 +21,11 @@ function Navbar({}: Props) {
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }, []);
+
+    function closeMenu() {
+      setIsMenuOpen(false);
+    }
+  
   return (
     <div className="fixed top-6 right-0 transform items-end flex flex-col z-40 ">
     <button
@@ -33,12 +38,12 @@ function Navbar({}: Props) {
         
       <div ref={menuRef} className=" bg-gray-700 flex flex-col font-medium uppercase  w-screen mt-0 z-40 h-80 space-y-4">
         
-        <Link href="#home"><button className='profilButton hover:text-[#6E61Ca]'>Acceuil</button></Link>
-    <Link href="#about"><button className='profilButton hover:text-[#6E61Ca]'>à propos</button></Link>
-        <Link href="#experiences"><button className='profilButton hover:text-[#6E61Ca]'>Expériences</button></Link>
-        <Link href="#competences"><button className='profilButton hover:text-[#6E61Ca]'>Compétences</button></Link>
-        <Link href="#projets"><button className='profilButton hover:text-[#6E61Ca]'>Projets</button></Link>
-        <Link href="#contact"><button className='profilButton hover:text-[#6E61Ca]'>Contact</button></Link>
+        <Link onClick={closeMenu} href="#home"><button className='profilButton hover:text-[#6E61Ca]'>Acceuil</button></Link>
+    <Link onClick={closeMenu} href="#about"><button className='profilButton hover:text-[#6E61Ca]'>à propos</button></Link>
+        <Link onClick={closeMenu} href="#experiences"><button className='profilButton hover:text-[#6E61Ca]'>Expériences</button></Link>
+        <Link onClick={closeMenu} href="#competences"><button className='profilButton hover:text-[#6E61Ca]'>Compétences</button></Link>
+        <Link onClick={closeMenu} href="#projets"><button className='profilButton hover:text-[#6E61Ca]'>Projets</button></Link>
+        <Link onClick={closeMenu} href="#contact"><button className='profilButton hover:text-[#6E61Ca]'>Contact</button></Link>
       </div>
     )}
   </div>

@@ -73,17 +73,14 @@ const Home = ( {}: Props) => {
     </div>
     
     <Link href="#home">
-              <footer className='sticky bottom-5 w-full cursor-pointer'>
+              <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
                 <div className='flex items-center justify-center'>
-                    <HomeIcon className=' hidden sm:block opacity-20 h-10 w-10 rounded-full filter hover:text-[#C282FA] transition-colors cursor-pointer hover:h-12 hover:w-12 hover:opacity-80 z-50'/>
+                    <HomeIcon className=' hidden sm:block opacity-20 h-10 w-10 rounded-full filter hover:text-[#C282FA] transition-colors cursor-pointer hover:h-12 hover:w-12 hover:opacity-80 '/>
                 </div>
               </footer>
 
           </Link> 
    
-    <div className={isMobile ? 'block' : 'block'}>
-          
-          </div>
 
     </div>
   )

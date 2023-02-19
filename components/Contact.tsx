@@ -1,6 +1,8 @@
 import React from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
+import { motion } from "framer-motion"
+
 type Inputs = {
     nom: string,
     email: string,
@@ -22,7 +24,20 @@ function Contact({}: Props) {
 <div className='h-screen flex relative  flex-col text-center md:text-left   md:flex-row max-x-7xl px-10 justify-center mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '>Contactez-moi</h3>
 
-        <div className='flex flex-col space-y-10 mt-40  '>
+        <motion.div 
+         initial ={{
+            opacity:0
+        }}
+        animate={{
+            opacity:1
+          
+        }}
+        transition={{
+            duration:2.5,
+        }}
+        
+        
+        className='flex flex-col space-y-10 mt-40  '>
             <h4 className='text-lg font-semibold text-center'>Une question ? Un projet ?  <span className='decoration-[#C282FA]/50 underline'>N&apos;hésitez pas</span> !
             </h4>
             <div className='space-y-10 sm:space-y-3'>
@@ -50,7 +65,7 @@ function Contact({}: Props) {
                     <button type='submit' 
                     className='bg-[#C282FA] py-5 px-10 rounded-md text-black font-bold text-lg'>Envoyer</button>
                 </form>
-                </div>
+                </motion.div>
   
 </div>
   )

@@ -77,7 +77,9 @@ type Props = {}
         </motion.div>
         </div>
         <div className={isMobile ? 'hidden' : 'block'}>
+        
             <Navbar/>
+          
         </div>
         </header>
   )

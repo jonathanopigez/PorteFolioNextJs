@@ -42,7 +42,21 @@ function Navbar({}: Props) {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50">
+    
+    <motion.div
+    initial={{
+     
+      opacity:0,
+    
+  }}
+  animate={{
+     
+      opacity: 1,
+   
+  }}
+  transition={{
+      duration: 3  }} 
+    className="fixed bottom-0 left-0 w-full z-50">
       <button
         className="fixed top-6 right-6 w-12 h-12 text-gray-500 font-medium uppercase border-gray-500 rounded-full flex justify-center items-center z-50"
         onClick={toggleMenu}
@@ -84,7 +98,8 @@ function Navbar({}: Props) {
           />
         </>
       )}
-    </div>
+    </motion.div>
+    
   );
 }
 

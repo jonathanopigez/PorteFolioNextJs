@@ -188,42 +188,42 @@ const competenceDev: CompetenceDev[] = [
   {
     id:1,
     nom: "Module : Sécurité & Multiplateformes ",
-  points: ["Failles de sécurité et parades (OWASP, injections) ","Développement Mobile (Flutter) ","Développement Desktop (Flutter) "]
+  points: ["Failles de sécurité et parades (OWASP, injections) | ","Développement Mobile (Flutter) | ","Développement Desktop (Flutter) "]
   },
   {
     id:2,
     nom: "Module : N-Layer & microservices",
-    points: ["Conception (Separation of Concerns, Design Patterns) ","Node.js & Express ","NoSQL ","API (REST, GraphQL, Websockets) "]
+    points: ["Conception (Separation of Concerns, Design Patterns) |","Node.js & Express | ","NoSQL | ","API (REST, GraphQL, Websockets) "]
   },
   {
     id:3,
     nom: "Module : Avant de développer ",
-  points: ["Cloud Computing (Serverless, FaaS, IaaS, PaaS, etc.) ","Schémas UML (diagrammes de classes, ER, de séquences) ","Gestion de projet (Cycle en V, méthodes agiles, Scrum) "]
+  points: ["Cloud Computing (Serverless, FaaS, IaaS, PaaS, etc.) | ","Schémas UML (diagrammes de classes, ER, de séquences) | ","Gestion de projet (Cycle en V, méthodes agiles, Scrum) "]
   },
   {
     id:4,
     nom: "Module : Back-end Front-end",
-    points: ["Conception (architecture synchrone, MVC) ","Conteneurisation (Docker) ","SGBDR ","PHP & Laravel ","JavaScript & Vue.js "]
+    points: ["Conception (architecture synchrone, MVC) | ","Conteneurisation (Docker) | ","SGBDR | ","PHP & Laravel | ","JavaScript & Vue.js "]
   },
   {
     id:5,
     nom: "Développer les composants d'accès aux données",
-    points: ["Accéder aux données de manière sécurisée avec le CRUD ","Programmer avec un langages objet ","Identifier les spécificités de sécurité des langages et les attaques classique (Faille XSS) "]
+    points: ["Accéder aux données de manière sécurisée avec le CRUD | ","Programmer avec un langage orienté objet | ","Identifier les spécificités de sécurité des langages et les attaques classiques (faille XSS) "]
   },
   {
     id:6,
     nom: "Créer une base de données",
-    points: ["Recenser et organiser les données (Merise, Mcd, Mpd) ","Ecrire les scripts de création et d'alimentation de la base de données, et de gestion des droits (Mysql) ","Créer une base de données, la maintenir et gérer les droit d'utilisateur grâce à un outils intégré (PhpMyAdmin) ","Exprimer les besoins de sécurité SGBD en suivant les bonnes pratiques "]
+    points: ["Recenser et organiser les données (Merise, Mcd, Mpd) | ","Écrire les scripts de création et d'alimentation de la base de données, ainsi que de gestion des droits (MySQL) | ","Créer une base de données, la maintenir et gérer les droits d'utilisateur grâce à un outil intégré (phpMyAdmin) | ","Exprimer les besoins de sécurité pour un SGBD en suivant les bonnes pratiques"]
   },
   {
     id:7,
     nom: "Développer une interface utilisateur web dynamique",
-    points: ["Coder un algorithme en suivant les normes et règles de développement ","Développer des scripts clients dans une page web a l'aide d'un framework ","Prendre en compte le réseau dans la sécurité ","Réaliser les tests avec un jeu d'essai "]
+    points: ["Coder un algorithme en suivant les normes et règles de développement | ","Développer des scripts clients dans une page web a l'aide d'un framework | ","Prendre en compte le réseau dans la sécurité | ","Réaliser les tests avec un jeu d'essai "]
   },
   {
     id:8,
     nom: "Réaliser une interface utilisateur web statique et adaptable ",
-    points: ["Construire une maquette ergonomique ","Développer des pages web statiques en utilisant HTML et CSS ","Intégrer du contenu multimédia dans une page web statique ","Réaliser une interface utilisateur adaptable grâce a un framework CSS (Bootstrap) "]
+    points: ["Construire une maquette ergonomique | ","Développer des pages web statiques en utilisant HTML et CSS | ","Intégrer du contenu multimédia dans une page web statique | ","Réaliser une interface utilisateur adaptable grâce a un framework CSS (Bootstrap)  "]
   },
   // initialiser le tableau d'objets OtherObject ici
 ];

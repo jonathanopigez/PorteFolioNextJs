@@ -21,8 +21,8 @@ function Contact({}: Props) {
     };
 
   return (
-<div className='h-screen flex relative  flex-col text-center md:text-left   md:flex-row max-x-7xl px-10 justify-center mx-auto items-center'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl '>Contactez-moi</h3>
+<div className='h-[200%] xxs:h-screen flex relative  flex-col text-center md:text-left   md:flex-row max-x-7xl px-10 justify-center mx-auto items-center'>
+<h3 className='absolute top-24 left-[30px] xxs:left-[30px] xxs:text-[1rem] xs:text-lg xs:left-[30px] sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Contactez-moi</h3>
 
         <motion.div 
          initial ={{
@@ -37,28 +37,28 @@ function Contact({}: Props) {
         }}
         
         
-        className='flex flex-col space-y-10 mt-40  '>
-            <h4 className='text-lg font-semibold text-center'>Une question ? Un projet ?  <span className='decoration-[#C282FA]/50 underline'>N&apos;hésitez pas</span> !
+        className='flex flex-col space-y-5 mt-[150px] xxs:mt-[110px] xs:mt-10  '>
+            <h4 className='text-1xl font-semibold mt-10 text-center'>Une question ? Un projet ?  <span className='decoration-[#C282FA]/50 underline'>N&apos;hésitez pas</span> !
             </h4>
-            <div className='space-y-10 sm:space-y-3'>
+            <div className='space-y-5 xs:space-y-10'>
                 <div className='flex items-center space-x-2 justify-center'>
                     <PhoneIcon className='text-[#C282FA] h-7 w-7 animate-pulse' />
-                    <p className='text-2xl xs:text-[18px]'>+33783943712</p>
+                    <p className='text-sm  xs:text-[18px]'>+33783943712</p>
                 </div>
                 <div className='flex items-center space-x-2 justify-center'>
                     <MapPinIcon className='text-[#C282FA] h-7 w-7 animate-pulse' />
-                    <p className='text-2xl xs:text-[18px]'>Normandie</p>
+                    <p className='text-sm  xs:text-[18px]'>Normandie</p>
                 </div>
-                <div className='flex items-center space-x-2 justify-center'>
+                <div className='flex items-center space-x-2 justify-center '>
                     <EnvelopeIcon className='text-[#C282FA] h-7 w-7 animate-pulse' />
-                    <p className='text-2xl xs:text-[18px]'>opigezjonathan@gmail.com</p>
+                    <p className='text-sm xs:text-[18px] '>opigezjonathan@gmail.com</p>
                 </div>
             </div>
  
-                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-[380px] mx-auto '>
-                    <div className='flex space-x-2'>
+                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-[300px] sm:w-[600px]  mx-auto'>
+                    <div className='flex space-x-2 mt-[100px] xxs:mt-0'>
                         <input {...register("nom")} placeholder='Nom' className='contactInput ' type="text" />
-                        <input {...register("email")}placeholder='Email' className='w-[143px] contactInput  ' type="email" />
+                        <input {...register("email")}placeholder='Email' className='w-[63px] sm:w-full contactInput  ' type="email" />
                     </div>
                     <input {...register("sujet")}  placeholder='Sujet'  className='contactInput ' type="text" />
                     <textarea {...register("message")}  placeholder='Message' className='contactInput' />

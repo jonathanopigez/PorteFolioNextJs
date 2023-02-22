@@ -40,36 +40,38 @@ function Projets({}: Props) {
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
     
-    className='h-[screen] flex relative overflow-hidden flex-col text-left md:flex-row  mb:max-w-full px-10 justify-evenly mx-auto items-center '>
-         <h3 className=' absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Projets</h3>
+    className='h-screen w-screen flex relative flex-col text-left max-w-full px-10 justify-evenly items-center snap-x '>
+             <h3 className='absolute top-24 left-[80px] xxs:left-[100px] xxs:text-[1rem] xs:text-lg xs:left-[115px] sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Projets</h3>
 
         <div className='relative w-full flex overflow-x-scroll space-x-40 mb:space-x-0 overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40'>
             {projets.map((projet,i) => (
-                <article key={projet?.id} className='w-screen flex-shrink-0 snap-end flex flex-col space-y-5 items-center mt-32 sm:mt-0 sm:justify-center p-20 xs:p-10 h-screen  '>
+                <article key={projet?.id} className='w-[100%] flex-shrink-0 snap-center flex flex-col space-y-1 items-center xs:mt-32 xxs:mt-24 mt-40 sm:justify-center p-14 xs:p-10  xxs:h-screen overflow-y-scroll xxs:overflow-y-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40  '>
                     <motion.img 
                      
-                    initial={{opacity:0,y:-300}}
+                    initial={{opacity:0,y:-150}}
                     whileInView={{opacity:1,y:0}}
                     transition={{duration:1.2}}
                     viewport={{once: true}}
 
-                    className='h-[170px] w-[270px] md:h-[400px] md:w-[600px] '
+                    className='xs:h-[170px] h-0 md:h-[400px] md:w-[600px] '
                     src={projet.image} alt="" />
-                    <div className='space-y-10 xs:space-y-5 pc-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-3xl xs:text-2xl font-semibold text-center xs:text-[18px]'>
+                    <div className='space-y-5 xxs:space-y-5 pc-0 md:px-10 max-w-6xl'>
+                        <h4 className='text-sm xxs:text-lg sm:text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#C282FA]/50 '> Projet { i + 1 } sur {projets.length}</span> : {projet.nom}  
                             </h4>
-                            <div className='uppercase sm:space-x-5  sm:flex grid grid-cols-3 justify-center content-center'>
+                            <div className='uppercase sm:space-x-5  sm:flex grid grid-cols-4 justify-center content-center'>
                             {projet.skills.map(technology =>(
-                                <span key={projet?.id} className='uppercase text-gray-500 text-center  '>
+                              
+                                <p key={projet?.id} className='uppercase text-gray-500 text-center text-[11px] '>
                                   
                                   {technology}
 
-                                </span>
+                                </p>
+                                
                             ))}
                             
                             </div>
-                            <p className='text-md text-left pl-4 sm:max-w-full'>{projet?.description}</p>
+                            <p className='text-sm text-left sm:max-w-full'>{projet?.description}</p>
                     </div>
                 </article>
             ))}

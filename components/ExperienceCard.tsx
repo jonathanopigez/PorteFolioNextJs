@@ -42,7 +42,7 @@ function ExperienceCard({titre, type, image, dateStart, dateEnd, skills, compete
        
     
     >
-    <article className='flex flex-col rounded-lg items-center space-y-7 h-[600px] w-[480px] flex-shrink-0 md:w-[800px] md:h-[650px] xl:w-[900px] xl:h-[500px] mt-[110px] xs:w-[350px] xs:h-[450px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-x-hidden cursor-pointer scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 h-[250px] w-[250px] flex-shrink-0 md:w-[800px] md:h-[650px] xl:w-[900px] xl:h-[500px] mt-[110px] xxs:w-[320px] xxs:h-[400px] xs:w-[350px] xs:h-[550px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-x-hidden cursor-pointer scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#C282FA]/40'>
     
         <motion.img
         initial={{

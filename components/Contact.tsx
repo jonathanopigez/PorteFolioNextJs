@@ -58,7 +58,7 @@ function Contact({}: Props) {
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-[300px] sm:w-[600px]  mx-auto'>
                     <div className='flex space-x-2 mt-[100px] xxs:mt-0'>
                         <input {...register("nom")} placeholder='Nom' className='contactInput ' type="text" />
-                        <input {...register("email")}placeholder='Email' className='w-[63px] sm:w-full contactInput  ' type="email" />
+                        <input {...register("email")}placeholder='Email' className='w-full contactInput  ' type="email" />
                     </div>
                     <input {...register("sujet")}  placeholder='Sujet'  className='contactInput ' type="text" />
                     <textarea {...register("message")}  placeholder='Message' className='contactInput' />

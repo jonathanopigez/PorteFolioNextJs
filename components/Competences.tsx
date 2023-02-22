@@ -131,8 +131,8 @@ function Compétence({}: Props) {
     transition={{duration:1.5}}
     
     className='h-screen flex  relative flex-col text-center md:text-left xl:flew-row max-w-[2000px] xl:pc-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center xs:space-y-0 '>
-           <h3 className='absolute top-24 left-2 xxs:left-9 xxs:text-[1rem] xs:text-lg xs:left-12 sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Compétences</h3>
-           <h3 className='absolute top-36  xxs:left-2 xxs:text-[1rem] xs:text-lg xs:left-1 sm:text-2xl sm:left-auto uppercase text-gray-500/40 text-[1rem]'>Survolez les compétences pour plus de détails</h3>
+           <h3 className='absolute top-24 left-2 xxs:left-8 xxs:text-[1rem] xs:text-lg xs:left-10 sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Compétences</h3>
+           <h3 className='absolute top-36  xxs:left-0 xxs:text-[1rem] xs:text-lg xs:left-0 sm:text-2xl sm:left-auto uppercase text-gray-500/40 text-[1rem]'>Survolez les compétences pour plus de détails</h3>
 
 
        <div className='absolute top-52 grid grid-cols-4 gap-5 '>

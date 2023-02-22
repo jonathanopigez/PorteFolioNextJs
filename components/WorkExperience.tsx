@@ -288,7 +288,7 @@ useEffect(() => {
         }}
         className='h-screen w-full flex relative flex-col text-left md:flex-row max-w-full px-10 justify-evenly items-center '>
     
-    <h3 className='absolute top-24 left-3 xxs:left-10 xxs:text-[1rem] xs:text-lg xs:left-14 sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Expériences</h3>
+    <h3 className='absolute top-24 left-3 xxs:left-9 xxs:text-[1rem] xs:text-lg xs:left-[50px] sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>Expériences</h3>
 
           <div className='p-10 ' >
        

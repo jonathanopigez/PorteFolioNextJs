@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion"
 import Image from 'next/image';
@@ -29,16 +29,7 @@ function Profile({}: Props) {
   }, []);
 
 
-  const [text, count] = useTypewriter({
-    words:[`Bonjour, je m'appelle Jonathan Opigez`,
-           "Développeur Fullstack",
-           "Diplomé bac+2 Développeur web et web mobile",
-           "<OpenToWork />",
-        ],
-        loop:true,
-       
-        delaySpeed: 3000,
-})
+ 
   return (
 
     <div className="relative h-screen space-y-8 flex flex-col items-center justify-center text-center overflow-hidden ">
@@ -67,7 +58,7 @@ function Profile({}: Props) {
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[5px]'>Concepteur développeur d&apos;applications</h2>
         <h6 className='text-3xl lg:text-6xl font-semibold spx-10'>
             <TextAnimation />
-            {/* <span id="encrypt" className='mr-3'>{text}</span> */}
+             
             
       </h6>
       

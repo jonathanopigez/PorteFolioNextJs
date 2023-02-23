@@ -78,7 +78,7 @@ const [text, count] = useTypewriter({
         
         className=' space-y-0 xxs:space-y-5 sm:space-y-10  md:px-10 sm:max-w-[50%] '>
           <h4 className='pt-2 text-1xl font-semibold text-center xs:text-2xl'>Une présentation <span className='text-[#6E61Ca]'>s&apos;impose !</span> </h4>
-          <p className=' tracking-wider text-left text-[.5rem] md:text-lg xs:text-[.9rem] xxs:text-[.7rem] text sm:h-[350px]'>{text}<Cursor /></p>
+          <p className=' tracking-wider text-left text-[.5rem] md:text-lg xs:text-[.9rem] xxs:text-[.7rem] text sm:h-[350px] xs:h-[460px]  xxs:h-[300px]'>{text}<Cursor /></p>
           <p className=' tracking-wider text-left text-[.5rem] md:text-lg xs:text-[.9rem] xxs:text-[.7rem] '>Si vous êtes un recruteur, vous pouvez me contacter via la rubrique  &quot;<Link href="#contact" className=' underline decoration-[#6E61Ca] hover:text-[#6E61Ca] hover:decoration-transparent' >Contactez-moi</Link>&quot;.</p>
         </motion.div>
    

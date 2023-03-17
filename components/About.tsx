@@ -34,7 +34,7 @@ const [text, count] = useTypewriter({
 })
 
   return (
-    <div className=' flex flex-col relative h-screen md:text-left md:flex-row max-x7xl px-10 justify-evenly mx-auto items-center md:max-w-[100%]'>
+    <div className=' flex flex-col relative h-screen md:text-left md:flex-row max-x7xl px-10 justify-center mx-auto items-center md:max-w-[100%]'>
             <h3 className='absolute top-24 left-[50px] xxs:left-[79px] xxs:text-[1rem] xs:text-lg xs:left-[90px] sm:text-2xl sm:left-auto uppercase tracking-[20px] text-gray-500 text-[1rem]'>A propos</h3>
         <motion.div
         initial={{
@@ -59,7 +59,7 @@ const [text, count] = useTypewriter({
            width="300" height="300"
            src="/images/avatar.svg"
         
-        className="  mb:mt-11 xs:mt-0 relative  -mb-20 flex-shrink-0 md:rounded-lg md:w-[800px]  md:h-[800px] " />
+        className="  mb:mt-11 xs:mt-0 relative mb-20 flex-shrink-0 md:rounded-lg md:w-[800px]  md:h-[800px] " />
         </div>
         </motion.div>
         <motion.div 
@@ -77,8 +77,8 @@ const [text, count] = useTypewriter({
           viewport={{once:true}}
         
         className=' space-y-0 xxs:space-y-5 sm:space-y-10  md:px-10 sm:max-w-[50%] '>
-          <h4 className='pt-2 text-1xl font-semibold text-center xs:text-2xl'>Une présentation <span className='text-[#6E61Ca]'>s&apos;impose !</span> </h4>
-          <p className=' tracking-wider text-left text-[.5rem] md:text-lg xs:text-[.9rem] xxs:text-[.7rem] text sm:h-[350px] xs:h-[460px]  xxs:h-[300px]'>{text}<Cursor /></p>
+          <h4 className='pt-2 text-[3vh] font-semibold text-center xs:text-2xl'>Une présentation <span className='text-[#6E61Ca]'>s&apos;impose!</span> </h4>
+          <p className=' tracking-wider text-left text-[1.4vh]  text sm:h-[350px] xs:h-[460px]  xxs:h-[300px]'>{text}<Cursor /></p>
           <p className=' tracking-wider text-left text-[.5rem] md:text-lg xs:text-[.9rem] xxs:text-[.7rem] '>Si vous êtes un recruteur, vous pouvez me contacter via la rubrique  &quot;<Link href="#contact" className=' underline decoration-[#6E61Ca] hover:text-[#6E61Ca] hover:decoration-transparent' >Contactez-moi</Link>&quot;.</p>
         </motion.div>
    

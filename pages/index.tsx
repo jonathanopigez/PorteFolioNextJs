@@ -43,7 +43,7 @@ const Home = ( {}: Props) => {
    
       <Header />
   {/*Home*/}
-        <section id="home" className='mt-0' >
+        <section id="home" >
           <Profile />
         </section>
   {/*A propos*/}

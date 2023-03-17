@@ -59,10 +59,10 @@ function Projets({}: Props) {
                         <h4 className='text-sm xxs:text-lg sm:text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#C282FA]/50 '> Projet { i + 1 } sur {projets.length}</span> : {projet.nom}  
                             </h4>
-                            <div className='uppercase sm:space-x-5  sm:flex grid grid-cols-4 justify-center content-center'>
+                            <div className='uppercase space-x-5  sm:flex grid grid-cols-2 justify-center content-center'>
                             {projet.skills.map(technology =>(
                               
-                                <p key={projet?.id} className='uppercase text-gray-500 text-center text-[11px] '>
+                                <p key={projet?.id} className='uppercase text-gray-500 text-left text-[2vh] pr-1 '>
                                   
                                   {technology}
 

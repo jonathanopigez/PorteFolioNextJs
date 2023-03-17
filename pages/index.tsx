@@ -43,27 +43,27 @@ const Home = ( {}: Props) => {
    
       <Header />
   {/*Home*/}
-        <section id="home" className="snap-start" >
+        <section id="home" >
           <Profile />
         </section>
   {/*A propos*/}
-        <section id="about" className="snap-center" >
+        <section id="about"  >
           <About />
         </section>
   {/* Experience */}
-        <section id="experiences"className="snap-start" >
+        <section id="experiences" >
           <WorkExperience />
         </section>
   {/* Competences */}
-        <section id="competences" className="snap-center" >
+        <section id="competences" >
           <Competences />
         </section>
   {/* Projets */}
-        <section id="projets" className="snap-start" >
+        <section id="projets" >
           <Projets />
         </section>
   {/* Contact */}
-        <section id="contact" className="snap-center">
+        <section id="contact">
           <Contact />
         </section>
 

@@ -53,7 +53,7 @@ function Projets({}: Props) {
                     transition={{duration:1.2}}
                     viewport={{once: true}}
 
-                    className='xs:h-[170px] h-30 md:h-[400px] md:w-[600px] '
+                    className='xxs:h-[18vh] h-30 md:h-[400px] md:w-[600px] '
                     src={projet.image} alt="" />
                     <div className='space-y-5 xxs:space-y-5 pc-0 md:px-10 max-w-6xl'>
                         <h4 className='text-sm xxs:text-lg sm:text-3xl font-semibold text-center'>
